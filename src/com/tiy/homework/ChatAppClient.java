@@ -15,13 +15,13 @@ public class ChatAppClient {
 
         try {
 
-            Socket clientSocket = new Socket("10.0.0.7", 8585);
+            Socket clientSocket = new Socket("localhost", 8585);
 
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
 
-            out.println("Hello from the other side...");
+            out.println("Hello *** from the other side...");
             String serverResponse = in.readLine();
 
             clientSocket.close();
